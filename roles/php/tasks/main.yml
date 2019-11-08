@@ -12,4 +12,4 @@
     - php-xmlrpc
     - php-xml
     state: latest
-  notify: restart apache
+  notify: reload apache

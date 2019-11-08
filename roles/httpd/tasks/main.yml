@@ -1,16 +1,16 @@
 - handlers:
-  name: restart apache
+  name: reload apache
   service:
     name: httpd
-    state: restarted
+    state: reloaded
 - tasks:
   name: install apache
   yum:
     name: httpd
     state: latest
-  notify: restart apache
+  notify: reload apache
   name: Enable service httpd
   service:
     name: httpd
     enabled: yes
-  notify: restart apache
+  notify: reload apache
