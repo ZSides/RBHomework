@@ -1,9 +1,16 @@
-- name: install apache
+- handlers:
+  name: restart apache
+  service:
+    name: httpd
+    state: restarted
+- tasks:
+  name: install apache
   yum:
     name: httpd
     state: latest
-- name: Start service httpd
+  notify: restart apache
+  name: Enable service httpd
   service:
     name: httpd
     enabled: yes
-    state: started
+  notify: restart apache

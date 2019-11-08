@@ -1,5 +1,5 @@
----
-- name: install php with all modules
+- tasks:
+  name: install php with all modules
   yum:
     name: 
     - php 
@@ -12,3 +12,4 @@
     - php-xmlrpc
     - php-xml
     state: latest
+  notify: restart apache
