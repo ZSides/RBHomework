@@ -1,0 +1,6 @@
+---
+- hosts: vbmachines
+  sudo: yes
+  roles:
+  - { role: httpd }
+  - { role: php }

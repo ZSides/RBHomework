@@ -1,0 +1,14 @@
+---
+- name: install php with all modules
+  yum:
+    name: 
+    - php 
+    - php-mysql
+    - php-devel
+    - php-gd
+    - php-pecl-memcache
+    - php-pspell
+    - php-snmp
+    - php-xmlrpc
+    - php-xml
+    state: latest
