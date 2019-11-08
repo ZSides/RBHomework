@@ -1,5 +1,4 @@
-- tasks:
-  name: install php with all modules
+- name: install php with all modules
   yum:
     name: 
     - php 
