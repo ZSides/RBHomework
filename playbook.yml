@@ -1,6 +1,17 @@
 ---
-- hosts: vbmachines
+- name: install server, stuff and wordpress
+  hosts: vbmachines
   sudo: yes
+  vars:
+    mysql_databases:
+      - name: homework_db
+        encoding: utf8
+        collation: utf8_bin
+    mysql_users:
+      - name: user_for_db
+        password: his_password
+        priv: "homework_db.*:ALL"
   roles:
   - { role: httpd }
+  - { role: robertdebock.mysql }
   - { role: php }
