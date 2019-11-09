@@ -1,4 +1,0 @@
-- name: add epel-release repository
-  yum:
-    name: epel-release
-    state: latest

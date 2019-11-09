@@ -3,6 +3,7 @@
   hosts: vbmachines
   sudo: yes
   vars:
+    wordpress_path: "wordpress"
     mysql_databases:
       - name: homework_db
         encoding: utf8
@@ -18,7 +19,6 @@
   - { role: geerlingguy.repo-epel }
   - { role: geerlingguy.repo-remi }
   - { role: httpd }
-  #- { role: robertdebock.mysql }
   - { role: geerlingguy.php }
   - { role: download_and_unzip_wp }
   # - { role: configurate_wp }
