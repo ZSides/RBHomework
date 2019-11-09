@@ -9,9 +9,16 @@
         collation: utf8_bin
     mysql_users:
       - name: user_for_db
-        password: his_password
+        password: his_password # ansible vault later
         priv: "homework_db.*:ALL"
+    php_enablerepo: "remi-php70,epel"
+    php_packages_state: "latest"
+    php_packages_extra: ["php-mysqlnd"]
   roles:
+  - { role: geerlingguy.repo-epel }
+  - { role: geerlingguy.repo-remi }
   - { role: httpd }
-  - { role: robertdebock.mysql }
-  - { role: php }
+  #- { role: robertdebock.mysql }
+  - { role: geerlingguy.php }
+  - { role: download_and_unzip_wp }
+  # - { role: configurate_wp }
