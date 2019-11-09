@@ -1,5 +1,18 @@
-- name: Download and unarchive to webserver folder
+- name: Create tmp dir
+  file:
+    path: /tmp/wordpress
+    state: directory
+    mode: "0755"
+- name: Download and unarchive to tmp folder
   unarchive:
-      src: https://wordpress.org/latest.tar.gz
-      dest: /var/www/html
-      remote_src: yes
+      src: files/wordpress-5.2.4.tar.gz
+      dest: /tmp/wordpress
+- name: Copy wordpress to webserver folder {{ wordpress_path }}
+  copy:
+    remote_src: True
+    src: /tmp/wordpress/wordpress/
+    dest: /var/www/html/{{ wordpress_path }}
+- name: Remove tmp folder
+  file:
+    path: /tmp/wordpress
+    state: absent

@@ -3,7 +3,7 @@
   hosts: vbmachines
   sudo: yes
   vars:
-    wordpress_path: "wordpress"
+    wordpress_path: ""
     mysql_databases:
       - name: homework_db
         encoding: utf8
