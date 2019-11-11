@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
       hw1.vm.network "private_network", type: "dhcp"
       hw1.vm.provider "virtualbox" do |vb|
           vb.gui = false
-          vb.memory = 128
+          vb.memory = 1024
           vb.name = "hw1"
       end
   end
@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
       hw2.vm.network "private_network", type: "dhcp"
       hw2.vm.provider "virtualbox" do |vb|
           vb.gui = false
-          vb.memory = 128
+          vb.memory = 1024
           vb.name = "hw2"
       end
   end

@@ -4,15 +4,19 @@
   sudo: yes
   vars:
     wordpress_path: ""
-    php_enablerepo: "remi-php70,epel"
-    php_packages_state: "latest"
-    php_packages_extra: ["php-mysqlnd"]
+    wordpress_database_name: wordpress
   vars_files:
-   - vars/wp_settings.yml
+    - vars/mysql_settings.yml
+    - vars/adminer_settings.yml
+    - vars/php_settings.yml
   roles:
-  - { role: geerlingguy.repo-epel }
-  - { role: geerlingguy.repo-remi }
-  - { role: httpd }
-  - { role: geerlingguy.php }
-  - { role: download_and_unzip_wp }
+    - role: geerlingguy.repo-epel
+    - role: geerlingguy.repo-remi
+    - role: geerlingguy.apache
+    - role: geerlingguy.php
+    - role: geerlingguy.php-mysql
+    - role: geerlingguy.adminer
+    - role: setup_mysql
+    - role: download_and_unzip_wp
   # - { role: configurate_wp }
+...

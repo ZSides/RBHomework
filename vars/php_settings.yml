@@ -1,0 +1,5 @@
+---
+php_enablerepo: "remi-php73,epel"
+php_packages_state: "latest"
+php_packages_extra: ["php-mysql"]
+...
