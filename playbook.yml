@@ -1,7 +1,7 @@
 ---
 - name: install server, stuff and wordpress
   hosts: vbmachines
-  sudo: yes
+  become: yes
   vars:
     wordpress_path: ""
     wordpress_database_name: wordpress

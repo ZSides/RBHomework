@@ -4,9 +4,15 @@
     path: /tmp/wordpress
     state: directory
     mode: "0755"
+- name: Загрузка последней версии на управляющую машину
+  get_url:
+    url: https://wordpress.org/latest.tar.gz
+    dest: files/wordpress.tar.gz
+  delegate_to: localhost
+  become: no
 - name: Загрузка с управляющей машины архива с WP и разархивация во временную папку
   unarchive:
-      src: files/wordpress-5.2.4.tar.gz
+      src: files/wordpress.tar.gz
       dest: /tmp/wordpress
 - name: Копирование файлов из временной папки в папку {{ wordpress_path }} на сервере
   copy:
