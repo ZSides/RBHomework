@@ -2,9 +2,6 @@
 - name: install server, stuff and wordpress
   hosts: vbmachines
   become: yes
-  vars:
-    wordpress_path: ""
-    wordpress_database_name: wordpress
   vars_files:
     - vars/mysql_settings.yml
     - vars/adminer_settings.yml
