@@ -20,7 +20,7 @@ Vagrantfile сконфигурирован таким образом, чтобы
 - wordpress_path - определяет папку, в которую будет разархивирован wordpress. Путь указывается относительно корневой директории веб-сервера.
 - wordpress_database_name - определяет имя для базы данных wordpress
 - wordpress_prefix - определяет префикс таблиц, измените, если планируется, что несколько установок wordpress будут пользоваться одной БД.
-[Список всех стандартных переменных роли wordpress](roles/wordpress/defaults/main.yml)
+[Список всех стандартных переменных роли wordpress.](roles/wordpress/defaults/main.yml)
 Затем идёт описание ролей. Я использую 6 ролей из из Ansible Galaxy:
 - geerlingguy.repo-epel Добавление репозитория epel для установки php и mysql версии, приемлемой для современного wordpress.
 - geerlingguy.repo-remi Добавление репозитория remi для установки php и mysql версии, приемлемой для современного wordpress.
