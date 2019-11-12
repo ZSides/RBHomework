@@ -16,7 +16,5 @@
     - role: geerlingguy.php
     - role: geerlingguy.php-mysql
     - role: geerlingguy.adminer
-    - role: setup_mysql
-    - role: download_and_unzip_wp
-  # - { role: configurate_wp }
+    - role: wordpress
 ...

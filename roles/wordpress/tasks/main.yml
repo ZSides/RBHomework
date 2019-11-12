@@ -1,0 +1,8 @@
+---
+- name: Подключение тасок
+  include_tasks: "{{ item }}"
+  loop:
+    - database.yml
+    - download.yml
+    - configure.yml
+...

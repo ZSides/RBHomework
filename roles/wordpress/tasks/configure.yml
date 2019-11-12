@@ -1,0 +1,6 @@
+---
+- name: Генерация wp-config.php по шаблону
+  template:
+    src: wp-config.php.j2
+    dest: /var/www/html/wp-config.php
+...

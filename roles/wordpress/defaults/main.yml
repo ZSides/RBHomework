@@ -1,0 +1,16 @@
+---
+mysql_username: username
+mysql_password: password
+mysql_hostname: localhost
+wordpress_path: ""
+wordpress_database_name: wordpress
+wordpress_prefix: wp_
+wordpress_AUTH_KEY: put your unique phrase here
+wordpress_SECURE_AUTH_KEY: put your unique phrase here
+wordpress_LOGGED_IN_KEY: put your unique phrase here
+wordpress_NONCE_KEY: put your unique phrase here
+wordpress_AUTH_SALT: put your unique phrase here
+wordpress_SECURE_AUTH_SALT: put your unique phrase here
+wordpress_LOGGED_IN_SALT: put your unique phrase here
+wordpress_NONCE_SALT: put your unique phrase here
+...
