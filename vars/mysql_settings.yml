@@ -1,4 +1,5 @@
 ---
+mysql_enablerepo: "remi,epel"
 mysql_username: mysql_rosbank
 mysql_password: !vault |
   $ANSIBLE_VAULT;1.1;AES256

@@ -14,6 +14,7 @@
     - role: geerlingguy.repo-remi
     - role: geerlingguy.apache
     - role: geerlingguy.php
+    - role: geerlingguy.mysql
     - role: geerlingguy.php-mysql
     - role: geerlingguy.adminer
     - role: wordpress
