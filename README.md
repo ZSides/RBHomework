@@ -34,6 +34,7 @@ Vagrantfile сконфигурирован таким образом, чтобы
 - geerlingguy.php       Установка php и модуля php-mysql для работы с БД.
 - geerlingguy.mysql     Установка MariaDB
 - geerlingguy.adminer   Установка инструмента для администрирования БД. Опционально.
+
 Далее я использую свою роль для настройки БД под wordpress, установки wordpress и конфигурации wp-config.php по шаблону.
 
 ## Самописная роль wordpress
